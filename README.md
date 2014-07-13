@@ -29,10 +29,15 @@ Major part of Blank's architecture is located in the `gulpfile.coffee`. It's mai
 Install
 -------
 
-`git clone git@github.com:borbit/blank.git`
-`cd blank & npm install`
+```
+$ gem install foreman
+$ git clone git@github.com:borbit/blank.git
+$ cd blank & npm install
+```
 
 Run
 ---
 
-`foreman start`
+```
+$ foreman start
+```

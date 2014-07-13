@@ -25,3 +25,14 @@ Major part of Blank's architecture is located in the `gulpfile.coffee`. It's mai
 - `gulp css-csso`
 - `gulp js-uglify`
 - `gulp dist`
+
+Install
+-------
+
+`git clone git@github.com:borbit/blank.git`
+`cd blank & npm install`
+
+Run
+---
+
+`foreman start`

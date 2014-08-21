@@ -12,7 +12,7 @@ Front-end server starter kit based on:
 Gulp
 ----
 
-Major part of Blank's architecture is located in the `gulpfile.coffee`. It's main responsibilty is to prepare all the static files (css, js, images, tempaltes etc.) to be served by our http server. Let's have a look at the list of tasks it can do for us:
+Major part of Blank's architecture is located in `gulpfile.coffee`. Its main responsibilty is preparing of all static files (css, js, images, tempaltes etc.) to be served by http server. Take a look at the tasks list it can do:
 
 - `gulp compile-less`
 - `gulp compile-coffee`

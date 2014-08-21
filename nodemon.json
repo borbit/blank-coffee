@@ -1,0 +1,6 @@
+{
+  "ext": "coffee",
+  "watch": [
+    "index.coffee"
+  ]
+}

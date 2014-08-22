@@ -153,6 +153,7 @@ getExternalModules = ->
   modules = modules.map (module) ->
     path = module.split("'")[1]
     name = path.split('/').pop()
+    name = name.toLowerCase();
     
     return {
       path: path

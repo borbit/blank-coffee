@@ -43,6 +43,7 @@ gulp.task 'compile-coffee', ->
     bundler.transform 'browserify-ejs'
     bundler.transform {sourceMap: no, coffeeout: yes}, 'coffee-reactify'
     bundler.transform 'coffeeify'
+    bundler.transform {'NODE_ENV': ':)'}, 'envify'
 
     getExternalModules().forEach (module) ->
       bundler.exclude module.name
@@ -55,7 +56,6 @@ gulp.task 'compile-coffee', ->
 
 gulp.task 'compile-common', ->
   compile = gulpBrowserify
-    transform: ['coffeeify']
     extensions: ['.coffee']
     detectGlobals: no
 
@@ -63,6 +63,9 @@ gulp.task 'compile-common', ->
     console.log err
 
   compile.once 'prebundle', (bundler) ->
+    bundler.transform 'coffeeify'
+    bundler.transform {'NODE_ENV': ':)'}, 'envify'
+
     getExternalModules().forEach (module) ->
       bundler.require module.path, expose: module.name
 

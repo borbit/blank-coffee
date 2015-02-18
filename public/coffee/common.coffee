@@ -1,1 +1,1 @@
-require '../js/libs/react'
+require 'react/addons' #@expose as react

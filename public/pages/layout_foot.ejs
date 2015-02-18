@@ -1,22 +1,6 @@
-  <script src="<%= dist('common.js') %>"></script>
+  <script src="<%= asset('common.js') %>"></script>
 <% (locals.js || []).forEach(function(src) { -%>
-  <script src="<%= dist(src) %>"></script>
+  <script src="<%= asset(src) %>"></script>
 <% }) -%>
-<%
-  if (locals.css_post || locals.js_post) {
-    var srcs =
-      (locals.css_post || []).concat(
-      (locals.js_post || []));
--%>
-  <script>
-    yepnope({
-      load: [
-<% srcs.forEach(function(src, i) { -%>
-       <%=(i ? ',' : ' ')%>'<%= dist(src) %>'
-<% }) -%>
-      ]
-    });
-  </script>
-<% } -%>
 </body>
 </html>

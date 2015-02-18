@@ -4,11 +4,11 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="initial-scale=1.0,user-scalable=no"/>
   <meta name="robots" content="noindex, nofollow">
-  <% if (locals.page_descr) { %><meta name="description" content="<%=: page_descr | capitalize %>" /><% } %>
-  <% if (locals.page_title) { %><title><%=: page_title | capitalize %></title><% } %>
+  <% if (locals.page_descr) { %><meta name="description" content="<%= page_descr %>" /><% } %>
+  <% if (locals.page_title) { %><title><%= page_title %></title><% } %>
   <link rel="icon" href="<%= asset('img/favicon.gif') %>"/>
 <% (locals.css || []).forEach(function(src) { -%>
-  <link rel="stylesheet" href="<%= dist(src) %>" />
+  <link rel="stylesheet" href="<%= asset(src) %>" />
 <% }) -%>
 </head>
 <body>
